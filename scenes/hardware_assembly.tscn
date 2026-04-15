@@ -20,6 +20,7 @@ z_index = -1
 position = Vector2(818.75, 540)
 scale = Vector2(0.79907227, 0.74447507)
 texture = ExtResource("4_4kffy")
+offset = Vector2(2, 0)
 
 [node name="Socket_CPU" type="Area2D" parent="." unique_id=960182711]
 position = Vector2(841, 394)
@@ -55,5 +56,13 @@ unique_name_in_owner = true
 offset = Vector2(1733, 0)
 scale = Vector2(1, 1)
 transform = Transform2D(1, 0, 0, 1, 1733, 0)
+
+[node name="CompleteButton" type="Button" parent="." unique_id=1182452941]
+visible = false
+offset_left = 1324.0
+offset_top = 164.0
+offset_right = 1783.0
+offset_bottom = 419.0
+text = "Complete Job!"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

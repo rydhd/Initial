@@ -21,7 +21,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-GlobalState="*res://global_state.gd"
+GlobalState="*uid://ovjic1cisrjd"
 
 [display]
 
