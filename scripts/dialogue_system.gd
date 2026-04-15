@@ -1,4 +1,3 @@
-# dialogue_system.gd
 extends Control
 
 @onready var label = $VBoxContainer/DialogueLabel 

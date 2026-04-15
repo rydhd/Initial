@@ -14,6 +14,7 @@ shader_parameter/edge_softness = 0.0630000029925
 [node name="TaskboardOverlay" type="Sprite2D" unique_id=941576990]
 texture = ExtResource("1_g33y3")
 script = ExtResource("2_jrgkd")
+text_font_size = 35
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=368549372]
 material = SubResource("ShaderMaterial_jrgkd")
@@ -28,16 +29,17 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="PanelContainer" type="PanelContainer" parent="." unique_id=521637333]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1919762465]
 offset_left = -461.0
-offset_top = -325.0
-offset_right = 413.0
-offset_bottom = 526.0
+offset_top = -322.0
+offset_right = 416.0
+offset_bottom = 533.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=1241275962]
+[node name="TaskList" type="VBoxContainer" parent="MarginContainer" unique_id=506730984]
 layout_mode = 2
 
-[node name="CheckBox" type="CheckBox" parent="PanelContainer/VBoxContainer" unique_id=2053727748]
-layout_mode = 2
-size_flags_horizontal = 4
-text = "install motherboard bruh "
+[node name="CloseButton" type="Button" parent="." unique_id=775193161]
+offset_left = 380.0
+offset_top = -390.0
+offset_right = 516.0
+offset_bottom = -309.0
