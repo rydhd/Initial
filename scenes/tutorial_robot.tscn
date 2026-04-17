@@ -8,19 +8,22 @@
 script = ExtResource("1_xftmx")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1699200026]
-position = Vector2(-32, 28.000004)
-scale = Vector2(0.12653616, 0.16811861)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_y40l0")
 
 [node name="DialogueAnchor" type="Control" parent="." unique_id=1578992992]
 layout_mode = 3
 anchors_preset = 0
+offset_left = 116.0
+offset_top = -66.0
+offset_right = 116.0
+offset_bottom = -66.0
 scale = Vector2(0.31745878, 0.8923318)
 
 [node name="SpeechBubble" type="PanelContainer" parent="DialogueAnchor" unique_id=2020531500]
 layout_mode = 0
-offset_right = 400.0
-offset_bottom = 40.0
+offset_right = 500.0
+offset_bottom = 60.0
 
 [node name="MarginContainer" type="MarginContainer" parent="DialogueAnchor/SpeechBubble" unique_id=1089890530]
 layout_mode = 2
@@ -28,6 +31,7 @@ layout_mode = 2
 [node name="RobotText" type="Label" parent="DialogueAnchor/SpeechBubble/MarginContainer" unique_id=1326126143]
 custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
+size_flags_vertical = 1
 theme_override_font_sizes/font_size = 20
 autowrap_mode = 3
 
