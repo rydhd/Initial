@@ -14,19 +14,38 @@ var _text_tween: Tween
 var is_typing: bool = false 
 
 func _ready() -> void:
+	# 1. Hide the entire robot immediately when the scene loads
+	visible = false 
+	
+	# 2. Keep your existing dialogue bubble setup
 	speech_bubble.visible = false
 	speech_bubble.modulate.a = 0.0 
 	
 	EventBus.trigger_robot_dialogue.connect(_on_robot_speak)
-	# Connect to our new fade out signal
 	EventBus.fade_out_robot.connect(_on_fade_out)
 	
 func fade_in_robot() -> void:
+	# 1. Make the robot visible right before the animation starts!
 	visible = true
-	var fade_tween: Tween = create_tween()
-	fade_tween.tween_property(self, "modulate:a", 1.0, 0.5).set_trans(Tween.TRANS_SINE)
+	
+	# 2. Reset the starting state to be invisible and tiny
+	modulate.a = 0.0
+	scale = Vector2.ZERO 
+	
+	# 3. Create the parallel tween for the pop-up effect
+	var popup_tween: Tween = create_tween()
+	popup_tween.set_parallel(true)
+	
+	popup_tween.tween_property(self, "modulate:a", 1.0, 0.3).set_trans(Tween.TRANS_SINE)
+	popup_tween.tween_property(self, "scale", Vector2.ONE, 0.5) \
+		.set_trans(Tween.TRANS_BACK) \
+		.set_ease(Tween.EASE_OUT)
 func _on_robot_speak(dialogue_text: String) -> void:
-	# Cancel old tweens
+	# 1. NEW: Check if the robot is hidden, and pop it in if it is!
+	if not visible:
+		fade_in_robot()
+		
+	# 2. Cancel old tweens
 	if _alpha_tween and _alpha_tween.is_valid(): _alpha_tween.kill()
 	if _text_tween and _text_tween.is_valid(): _text_tween.kill()
 
@@ -35,7 +54,7 @@ func _on_robot_speak(dialogue_text: String) -> void:
 	speech_bubble.visible = true
 	is_typing = true
 	
-	# Start the sound! (Ensure your AudioStreamPlayer2D is set to 'Loop' in the inspector)
+	# Start the sound!
 	blip_sound.play()
 	
 	_alpha_tween = create_tween()

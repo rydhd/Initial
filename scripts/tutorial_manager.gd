@@ -16,8 +16,8 @@ func _ready() -> void:
 	EventBus.npc_arrived.connect(_on_npc_arrived)
 	EventBus.issue_clipped_to_board.connect(_on_issue_clipped)
 	
-	# Optional: Start the tutorial after a short delay so the scene loads
-	get_tree().create_timer(1.0).timeout.connect(start_tutorial)
+	## Optional: Start the tutorial after a short delay so the scene loads
+	#get_tree().create_timer(1.0).timeout.connect(start_tutorial)
 
 # res://scripts/tutorial_manager.gd
 

@@ -12,3 +12,6 @@ signal issue_clipped_to_board
 signal show_bell_arrow
 
 signal fade_out_robot
+
+# NEW: Signal to trigger the issue UI
+signal show_issue_overlay(issue_text: String)

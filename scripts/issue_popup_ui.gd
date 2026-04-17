@@ -1,15 +1,15 @@
 extends CanvasLayer
 
-# Grab references to our UI nodes
-@onready var name_label: Label = $TicketPanel/MarginContainer/VBoxContainer/CustomerNameLabel
-@onready var description_text: RichTextLabel = $TicketPanel/MarginContainer/VBoxContainer/IssueDescription
-@onready var clip_button: Button = $TicketPanel/MarginContainer/VBoxContainer/ClipButton
+# UPDATE THESE THREE LINES:
+@onready var name_label: Label = $PanelContainer/MarginContainer/VBoxContainer/Label
+@onready var description_text: RichTextLabel = $PanelContainer/MarginContainer/VBoxContainer/RichTextLabel
+@onready var clip_button: Button = $PanelContainer/MarginContainer/VBoxContainer/Button
 
 # We store the issue ID so we know WHAT we are clipping to the board
 var current_issue_id: String = ""
 
 func _ready() -> void:
-	# Connect the button click to our function using Godot 4 syntax
+	# Now this will work because clip_button actually found the Button node!
 	clip_button.pressed.connect(_on_clip_button_pressed)
 
 # You call this function from your NPC script to populate the popup
