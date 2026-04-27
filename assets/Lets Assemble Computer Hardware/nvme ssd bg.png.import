@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://jhgnq4hea8eb"
-path="res://.godot/imported/Ram.jpg-9d22efa92314abe9f1d9693e3abfe18b.ctex"
+uid="uid://dbiuuhb44ygny"
+path="res://.godot/imported/nvme ssd bg.png-506f323daefc7fc07ebf97368d4d880e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Lets Assemble Computer Hardware/Ram.jpg"
-dest_files=["res://.godot/imported/Ram.jpg-9d22efa92314abe9f1d9693e3abfe18b.ctex"]
+source_file="res://assets/Lets Assemble Computer Hardware/nvme ssd bg.png"
+dest_files=["res://.godot/imported/nvme ssd bg.png-506f323daefc7fc07ebf97368d4d880e.ctex"]
 
 [params]
 

@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://duq7ti5mwo7du"]
+
+[ext_resource type="Texture2D" uid="uid://b1s0sdscim27h" path="res://assets/Lets Assemble Computer Hardware/xtra 5.png" id="1_4tikd"]
+[ext_resource type="Texture2D" uid="uid://bfpgngd84t1eu" path="res://assets/Lets Assemble Computer Hardware/System unit Front Panel.png" id="2_co3fv"]
+[ext_resource type="Script" uid="uid://b6lkm44prl4gb" path="res://scripts/assemble_motherboard.gd" id="2_vnc75"]
+[ext_resource type="Script" uid="uid://bkxqje0x5liu1" path="res://scripts/draggable_motherboard.gd" id="4_ntfno"]
+[ext_resource type="Texture2D" uid="uid://c1l5qb7algj8w" path="res://assets/Lets Assemble Computer Hardware/motherboard closed and colored bg removedf.png" id="5_kriwg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rstot"]
+size = Vector2(291, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_74gfa"]
+size = Vector2(332, 246)
+
+[node name="AssembleMotherboard" type="Sprite2D" unique_id=1633463968]
+position = Vector2(962, 545)
+texture = ExtResource("1_4tikd")
+script = ExtResource("2_vnc75")
+
+[node name="SystemUnitFrontPanel" type="Sprite2D" parent="." unique_id=1667926510]
+position = Vector2(-478, -31)
+texture = ExtResource("2_co3fv")
+
+[node name="Motherboard_Tray" type="Area2D" parent="." unique_id=1660359980]
+position = Vector2(-597, -131)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Motherboard_Tray" unique_id=663911490]
+position = Vector2(1, -2)
+scale = Vector2(1.0907913, -16.504955)
+shape = SubResource("RectangleShape2D_rstot")
+
+[node name="DraggableMotherboard" type="Area2D" parent="." unique_id=332584423]
+position = Vector2(452, -95)
+script = ExtResource("4_ntfno")
+
+[node name="Sprite2D" type="Sprite2D" parent="DraggableMotherboard" unique_id=1687275353]
+position = Vector2(6.1035156e-05, -1.000001)
+scale = Vector2(0.3801108, 0.4082419)
+texture = ExtResource("5_kriwg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DraggableMotherboard" unique_id=622467248]
+position = Vector2(7, 4)
+scale = Vector2(1.3697284, 2.0108984)
+shape = SubResource("RectangleShape2D_74gfa")
+
+[node name="CompleteButton" type="Button" parent="." unique_id=1898701217]
+offset_left = 438.0
+offset_top = 291.0
+offset_right = 521.0
+offset_bottom = 322.0
+scale = Vector2(3.2288954, 4.080677)
+text = "Complete"
