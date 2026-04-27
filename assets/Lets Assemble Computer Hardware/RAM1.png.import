@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://da78yd2x5fqib"
-path="res://.godot/imported/GPU.jpg-4a95e44fa2bc22df05ac6e049f82a002.ctex"
+uid="uid://dluisic68e7wq"
+path="res://.godot/imported/RAM1.png-ccffe7986e9cda195555d239ea01095b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Lets Assemble Computer Hardware/GPU.jpg"
-dest_files=["res://.godot/imported/GPU.jpg-4a95e44fa2bc22df05ac6e049f82a002.ctex"]
+source_file="res://assets/Lets Assemble Computer Hardware/RAM1.png"
+dest_files=["res://.godot/imported/RAM1.png-ccffe7986e9cda195555d239ea01095b.ctex"]
 
 [params]
 

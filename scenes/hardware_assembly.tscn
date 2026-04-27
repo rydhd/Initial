@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://wsoibpe76ngv" path="res://scenes/cpu.tscn" id="3_gude4"]
 [ext_resource type="Texture2D" uid="uid://c1l5qb7algj8w" path="res://assets/Lets Assemble Computer Hardware/motherboard closed and colored bg removedf.png" id="4_4kffy"]
 [ext_resource type="PackedScene" uid="uid://cp4veoehhj8k0" path="res://scenes/assembly_task_list.tscn" id="5_s4mkv"]
-
+[ext_resource type="PackedScene" uid="uid://0byfmi315lyu" path="res://scenes/ram.tscn" id="5_un8ii"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1bf13"]
 size = Vector2(152, 152)
@@ -37,6 +37,14 @@ position = Vector2(810, 713)
 position = Vector2(-2, 5)
 shape = SubResource("RectangleShape2D_kj3go")
 
+[node name="Socket_RAM" type="Area2D" parent="." unique_id=828015522]
+position = Vector2(1134.9999, 428)
+rotation = -1.5868313
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Socket_RAM" unique_id=1709710092]
+position = Vector2(-2, 5)
+shape = SubResource("RectangleShape2D_kj3go")
+
 [node name="GPU" parent="." unique_id=725532990 instance=ExtResource("2_kj3go")]
 unique_name_in_owner = true
 position = Vector2(1717, 584.00006)
@@ -44,8 +52,12 @@ scale = Vector2(1.3648648, 1.7043011)
 
 [node name="CPU" parent="." unique_id=2077517426 instance=ExtResource("3_gude4")]
 unique_name_in_owner = true
-position = Vector2(1685, 757)
-scale = Vector2(0.22551018, 0.16020408)
+position = Vector2(1689, 800)
+scale = Vector2(0.525307, 0.44522783)
+
+[node name="Ram" parent="." unique_id=2092034636 instance=ExtResource("5_un8ii")]
+unique_name_in_owner = true
+position = Vector2(1540, 350)
 
 [node name="Button" type="Button" parent="." unique_id=589954609]
 offset_right = 128.0
